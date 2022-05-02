@@ -10,7 +10,7 @@ const {
   MessageActionRow,
   MessageButton,
   MessageEmbed
-} = require("discord.js");//なんでdiscord.jsを2回もRequestしてるの？MessageButtonとかを1-4のとこにかけばDiscord.MessageButtonじゃなくそのままMessageButtonで書ける
+} = require("discord.js");
 
 const {
   Player,
@@ -27,7 +27,7 @@ const client = new Client(option);
 
 const settings = {
   prefix: ']',
-  token: process.env.token //脆弱性大(環境変数に入れろ)
+  token: process.env.token 
 };
 
 const player = new Player(client, {
@@ -53,7 +53,7 @@ client.on('messageCreate', async(message) => {
   
   let guildQueue = client.player.getQueue(message.guild.id);
   
-  if (command === "status") { //コマンド毎にif使うなswitch使うとかファイルで分けるとか工夫しろ読みにくい
+  if (command === "status") { 
     status(message,client,MessageEmbed)
   }
   
