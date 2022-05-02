@@ -2,5 +2,5 @@
 Supports end.
 
 ## Licence
-Free.
+Free. ( expect for package )
 
